@@ -1,12 +1,12 @@
-import './App.css';
+import styles from './App.module.css';
 import UserPage from './pages/UserPage';
 
 function App () {
   return (
-    <>
-      <h1>Добавить пользавателя Twith</h1>
+    <div className={styles.formContainer}>
+      <h1>Добавить пользавателя Twitch</h1>
       <UserPage />
-    </>
+    </div>
   );
 }
 
