@@ -136,5 +136,8 @@ table {
 
 body {
   font-size: 2rem;
-  font-family: 'Rubik Wet Paint', sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #2e2e2e, #4b4b4b);
+  color: #f0f0f0;
+  height: 100vh;
 }

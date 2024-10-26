@@ -21,8 +21,12 @@ function UserForm () {
       {formikProps => (
         <Form className={styles.form}>
           <div>
-            <label htmlFor='nickname'>Nick name:</label>
-            <Field type='text' name='nickname' placeholder='Your nickname' />
+            <label htmlFor='nickname'>Ник на Twitch: </label>
+            <Field
+              type='text'
+              name='nickname'
+              placeholder='Введите ваш ник Twitch'
+            />
             <ErrorMessage
               name='nickname'
               component='div'
@@ -30,8 +34,8 @@ function UserForm () {
             />
           </div>
           <div>
-            <label htmlFor='name'>Name:</label>
-            <Field type='text' name='name' placeholder='Your name' />
+            <label htmlFor='name'>Реальное имя: </label>
+            <Field type='text' name='name' placeholder='Введите реальное имя' />
             <ErrorMessage
               name='name'
               component='div'

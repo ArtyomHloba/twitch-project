@@ -4,7 +4,7 @@ import UserPage from './pages/UserPage';
 function App () {
   return (
     <>
-      <h1>Input your information</h1>
+      <h1>Добавить пользавателя Twith</h1>
       <UserPage />
     </>
   );
