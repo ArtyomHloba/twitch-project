@@ -1,4 +1,4 @@
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { USER_VALIDATION_SCHEMA } from '../../../utils/validationSchemas';
 import styles from './UserForm.module.css';
 function UserForm () {
@@ -20,12 +20,24 @@ function UserForm () {
     >
       {formikProps => (
         <Form className={styles.form}>
-          <Field
-            label='Nickname:'
-            type='text'
-            name='nickname'
-            placeholder='Yournickname'
-          />
+          <div>
+            <label htmlFor='nickname'>Nick name:</label>
+            <Field type='text' name='nickname' placeholder='Your nickname' />
+            <ErrorMessage
+              name='nickname'
+              component='div'
+              className={styles.error}
+            />
+          </div>
+          <div>
+            <label htmlFor='name'>Name:</label>
+            <Field type='text' name='name' placeholder='Your name' />
+            <ErrorMessage
+              name='name'
+              component='div'
+              className={styles.error}
+            />
+          </div>
           <button type='submit'>Save</button>
         </Form>
       )}
