@@ -4,7 +4,7 @@ import UserPage from './pages/UserPage';
 function App () {
   return (
     <div className={styles.formContainer}>
-      <h1>Добавить пользавателя Twitch</h1>
+      <h1>Добавить пользователя Twitch</h1>
       <UserPage />
     </div>
   );

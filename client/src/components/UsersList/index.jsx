@@ -7,20 +7,22 @@ import { getUsersThunk } from './../../store/slices/usersSlice';
 export const UsersList = ({ users, isFetching, error, getUsers }) => {
   useEffect(() => {
     getUsers();
-  }, []);
+  }, [getUsers]);
 
   return (
-    <>
+    <section className={styles.listContainer}>
       <BeatLoader loading={isFetching} />
-      {error && <div>!!!ERROR!!!</div>}
+      {error && <div>Что-то пошло не так...</div>}
       <ul>
         {users.map(u => (
           <li key={u.id}>
-            <p>{JSON.stringify(u)}</p>
+            <p>
+              Ник: {u.nickname} Имя: {u.name}
+            </p>
           </li>
         ))}
       </ul>
-    </>
+    </section>
   );
 };
 

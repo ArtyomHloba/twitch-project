@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #444;
+  background-color: #333;
   padding: 40px;
   margin-top: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  max-width: 500px;
+  box-shadow: 0 1px 4px #6200ea;
+  max-width: 800px;
   width: 100%;
 }
 
@@ -37,6 +37,8 @@ label {
 }
 
 input[type='text'] {
+  background-color: #444;
+  color: white;
   padding: 10px;
   font-size: 14px;
   border: 1px solid #888;
