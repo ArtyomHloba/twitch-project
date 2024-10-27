@@ -14,11 +14,11 @@ module.exports.createUser = async (req, res, next) => {
 
 module.exports.getUsers = async (req, res, next) => {
   const {
-    query: { page, results },
+    query: { page = 1, results = 10 },
   } = req;
 
-  const limit = results;
-  const offset = (page - 1) * results;
+  const limit = parseInt(results, 10);
+  const offset = (parseInt(page, 10) - 1) * limit;
 
   try {
     const foundUsers = await User.findAll({
