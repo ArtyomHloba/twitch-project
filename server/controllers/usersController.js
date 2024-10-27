@@ -3,6 +3,7 @@ const { User } = require('./../models');
 
 module.exports.createUser = async (req, res, next) => {
   const { body } = req;
+  console.log('Received body:', body);
   try {
     const createdUser = await User.create(body);
     const preparedUser = _.omit(createdUser.get(), ['createdAt', 'updatedAt']);
