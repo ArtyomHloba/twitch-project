@@ -1,15 +1,20 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { USER_VALIDATION_SCHEMA } from '../../../utils/validationSchemas';
 import styles from './UserForm.module.css';
+import { createUserThunk } from '../../../store/slices/usersSlice';
+import { connect } from 'react-redux';
 
-function UserForm () {
+function UserForm ({ createUser }) {
   const initialValues = {
     nickname: '',
     name: '',
   };
 
   const handleSubmit = (values, formikBag) => {
-    console.log('values :>> ', values);
+    const formData = new FormData();
+    formData.append('nickname', values.nickname);
+    formData.append('name', values.name);
+    createUser(formData);
     formikBag.resetForm();
   };
 
@@ -48,4 +53,8 @@ function UserForm () {
   );
 }
 
-export default UserForm;
+const mapDispatchToProps = dispatch => ({
+  createUser: values => dispatch(createUserThunk(values)),
+});
+
+export default connect(null, mapDispatchToProps)(UserForm);
