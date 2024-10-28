@@ -74,3 +74,9 @@ input[type='text']:focus {
   background-color: #3700b3;
   transform: scale(1.02);
 }
+
+@media (max-width: 300px) {
+  label {
+    font-size: 15px;
+  }
+}
