@@ -75,7 +75,7 @@ input[type='text']:focus {
   transform: scale(1.02);
 }
 
-@media (max-width: 300px) {
+@media (max-width: 380px) {
   label {
     font-size: 15px;
   }
